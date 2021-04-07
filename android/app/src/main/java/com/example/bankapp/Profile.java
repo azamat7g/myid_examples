@@ -73,7 +73,7 @@ public class Profile extends AppCompatActivity {
 
     public void getUserData(String code) {
         OkHttpClient client = new OkHttpClient();
-        String url = "https://your-awesome-site-api-url.uz/get-user-data?code=" + code;
+        String url = "https://your-awesome-site-api-url.uz/api.php?code=" + code;
 
         Request request = new Request.Builder()
                 .url(url)
