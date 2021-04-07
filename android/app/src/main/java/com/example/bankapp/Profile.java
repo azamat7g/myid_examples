@@ -26,7 +26,6 @@ import okhttp3.Response;
 public class Profile extends AppCompatActivity {
 
     TextView textView;
-    String code;
     LinearLayout layout;
     ProgressBar progressBar;
 
@@ -53,11 +52,9 @@ public class Profile extends AppCompatActivity {
         if (appLinkData.getQueryParameterNames().contains("error")) {
             setDataToList("Access denied");
         } else {
-            code = appLinkData.getQueryParameter("code");
-
             layout.setVisibility(View.GONE);
 
-            getUserData();
+            getUserData(appLinkData.getQueryParameter("code"));
         }
     }
 
@@ -74,7 +71,7 @@ public class Profile extends AppCompatActivity {
         }
     }
 
-    public void getUserData() {
+    public void getUserData(String code) {
         OkHttpClient client = new OkHttpClient();
         String url = "https://your-awesome-site-api-url.uz/get-user-data?code=" + code;
 
