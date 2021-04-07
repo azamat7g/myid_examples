@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String clientId = YOUR_CLIENT_ID;
-                String redirectUri = YOUR_REDIRECT_URL;
+                String redirectUri = "uzinfocom://bank";
 
                 String url = String.format("https://myid.uz/api/v1/oauth2/authorization?client_id=%s&redirect_uri=%s&response_type=%s&method=%s",
                         clientId,
