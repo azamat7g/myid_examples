@@ -27,11 +27,12 @@ public class MainActivity extends AppCompatActivity {
                 String clientId = YOUR_CLIENT_ID;
                 String redirectUri = "uzinfocom://bank";
 
-                String url = String.format("https://myid.uz/api/v1/oauth2/authorization?client_id=%s&redirect_uri=%s&response_type=%s&method=%s",
+                String url = String.format("https://myid.uz/api/v1/oauth2/authorization?client_id=%s&redirect_uri=%s&response_type=%s&method=%s&scope=%s",
                         clientId,
                         redirectUri,
                         "code",
-                        authSwitch.isChecked() ? "strong" : "simple"
+                        authSwitch.isChecked() ? "strong" : "simple",
+                        "common_data,doc_data,contacts,address"
                 );
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(browserIntent);

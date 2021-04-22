@@ -21,6 +21,7 @@ class ViewController: UIViewController {
             URLQueryItem(name: "redirect_uri", value: "uzinfocom://bank"),
             URLQueryItem(name: "response_type", value: "code"),
             URLQueryItem(name: "method", value: authTypeSwitch.isOn ? "strong" : "simple"),
+            URLQueryItem(name: "scope", value: "common_data,doc_data,contacts,address"),
         ]
         
         urlComps.queryItems = queryItems

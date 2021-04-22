@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
             let code = components?.queryItems?.first(where: { $0.name == "code" })?.value
             
-            let url = URL(string: "http://my2.dev.gov.uz/azamat/ru/test/get-user?code=" + code!)!
+            let url = URL(string: "https://your-awesome-site-api-url.uz/api.php?code=" + code!)!
             
             URLSession.shared.dataTask(with: url) {(data, response, error) in
                 guard let data = data else { return }
