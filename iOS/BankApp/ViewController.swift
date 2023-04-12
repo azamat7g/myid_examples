@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         var urlComps = URLComponents(string: "https://myid.uz/api/v1/oauth2/authorization")!
         let queryItems = [
-            URLQueryItem(name: "client_id", value: YOU_CLIENT_ID),
+            URLQueryItem(name: "client_id", value: YOUR_CLIENT_ID),
             URLQueryItem(name: "redirect_uri", value: "uzinfocom://bank"),
             URLQueryItem(name: "response_type", value: "code"),
             URLQueryItem(name: "method", value: authTypeSwitch.isOn ? "strong" : "simple"),
